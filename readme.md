@@ -47,5 +47,5 @@ cat *.fa > all_pep.fa
 
 A perl script to filter fasta files by a user input minimum number of nucleotides or amino acids. The fasta file can be an alignment or any kind of multi-fasta file
 
-usage = perl <script_name> <file name or file extension for >1 file (.fa or .fasta)> <minimum_length>
+usage = perl <script_name> <file name or file extension for multiple files (.fa or .fasta)> <minimum_length>
 <br><br>
