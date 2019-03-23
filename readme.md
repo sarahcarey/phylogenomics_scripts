@@ -41,3 +41,11 @@ cat *.fa > all_pep.fa
 
 2. To make the necessary modificiations to your Orthogroup.txt file you will need to get rid of the column containing the orthogroup numbers e.g. "OG0000001: ,OG0000002: ,...OG000000N: " and make the file tab-delimited rather than space-delimited. I recommend using a text editor that can find and replace GREP patterns. If you find OG\d+:  (be sure to include a space after the colon) and replace with nothing you should be able to remove the columns of orthogroup numbers. You can also convert the file from space-delimited to tab-deliminted by using find to find all the spaces and replace with \t (replace with tabs) 
 <br><br>
+
+
+## alignment_length_filter.pl
+
+A perl script to filter fasta files by a user input minimum number of nucleotides or amino acids. The fasta file can be an alignment or any kind of multi-fasta file
+
+usage = perl <script_name> <file name or file extension for >1 file (.fa or .fasta)> <minimum_length>
+<br><br>
