@@ -1,6 +1,6 @@
 ## orthogroup_filter.pl
 
-A perl script to filter orthogroups output by Orthofinder for a minimum number of species. Details on running OrthoFinder are found here: https://github.com/davidemms/OrthoFinder
+A perl script to filter orthogroups output by [Orthofinder](https://github.com/davidemms/OrthoFinder) for a minimum number of species.
 
 usage = perl <script_name> <name_of_orthogroup_file> <num_of_species_required>
 
@@ -48,4 +48,12 @@ cat *.fa > all_pep.fa
 A perl script to filter fasta files by a user input minimum number of nucleotides or amino acids. The fasta file can be an alignment or any kind of multi-fasta file
 
 usage = perl <script_name> <file name or file extension for multiple files (.fa or .fasta)> <minimum_length>
+<br><br>
+
+
+## rename_fasta_header_trinity.pl
+
+A perl script to rename cds and peptide files after runnning [Trinity](https://github.com/trinityrnaseq/trinityrnaseq/wiki) and [Transdecoder](https://github.com/TransDecoder/TransDecoder/wiki). Tested on versions 2.10.0 and 5.5.0, respectively. The script will take a user input species name and append the species to each gene name (e.g., >TRINITY_DN0_c0_g1_i1.p1). The remaining information in the fasta header from Transdecoder will be removed. The output file will also be renamed species_name.cds.fasta or species_name.pep.fasta (depending on whether you are renaming your cds or pep files). Can be run a single file bylisting the indivudal file name for the <file_extension> or an entire directory of files ending in a given extension (e.g., .fasta)
+
+usage = perl <script_name> <file_extension> <species_name> <cds_or_pep>
 <br><br>
